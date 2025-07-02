@@ -85,10 +85,10 @@
                                             <h3>Unitree Go2</h3>
                                         </header>
                                         <p>The Unitree Go2 is a research-grade quadruped robot capable of reaching speeds up to 
-                                            3.7 m/s, climbing slopes up to 40°, and stepping over 16 cm obstacles. It integrates 
+                                            3.7 m/s, climbing ramps up to 40°, and stepping over 16 cm obstacles. It integrates
                                             4D LiDAR, high-definition cameras, and foot-end force sensors for real-time perception. 
                                             The robot includes an 8-core processor and support for NVIDIA Orin NX 16GB modules. 
-                                            The robot runs for up to 4 hours on a 15,000 mAh smart battery and includes standard 
+                                            The robot operates for up to 4 hours on a 15,000 mAh smart battery and includes standard
                                             connectivity options such as Ethernet, USB, and SBUS. Go2 provides full SDK access 
                                             with ROS 2 compatibility and is suitable for learning-based control, especially RL.</p>
                                     </div>
@@ -125,7 +125,7 @@
                                         </header>
                                         <p>myAGV is a ROS-compatible mobile robot developed by Elephant Robotics. 
                                             It features omnidirectional movement with Mecanum wheels, a built-in Lidar for SLAM 
-                                            (gmapping and cartographer), and a 5MP camera for vision-based tasks. The platform 
+                                            (gmapping and cartographer), and a 5-MP camera for vision-based tasks. The platform
                                             supports modular extensions, including robotic arms, and is suitable for research in 
                                             navigation, mapping, and collaborative robotics.</p>
                                     </div>
@@ -144,7 +144,7 @@
                                         <p>myCobot 280 Pi is a lightweight 6-axis robotic arm designed for AI education and 
                                             early-stage research. Powered by a Raspberry Pi 4B and running Ubuntu Mate with 
                                             built-in support for Python, ROS1, and ROS2, it enables hands-on learning in kinematics, 
-                                            machine vision, and algorithm development. Despite its compact size (860g), it supports 
+                                            machine vision, and algorithm development. Despite its compact size (860 g), it supports
                                             various end-effectors and modular accessories, making it ideal for use in smart homes, labs, 
                                             and embedded AI applications. Programming is supported through Python, graphical tools like 
                                             myBlockly, and full access to the ROS ecosystem.</p>
@@ -163,34 +163,43 @@
                                         </header>
                                         <p>The DJI Tello is a compact, programmable drone ideal for teaching and experimenting with aerial 
                                             robotics. It supports Python, Scratch, and ROS, making it a popular tool for education and research 
-                                            in perception, control, and autonomous flight. With a 5 MP camera, 13-minute flight time, and stable 
+                                            in perception, control, and autonomous flight. With a 5-MP camera, 13 minutes of flight time, and stable
                                             indoor hovering, Tello is a practical platform for exploring vision-based navigation and RL tasks at low cost.</p>
                                     </div>
                                 </div>
                             </section>
 
-                        <h2>Robot Teams</h2>
-                            <section id="roboteams" class="spotlight-item">
-                                 <div class="row">
-                            <div class="col-4 col-12-medium">
-                                <span class="image fit"><img src="images/robots/agvs.png" alt="myCobot with a gripper on myAGV" style="padding: 1em;"/></span>
-                                <h6 style="text-align:center">myCobot with a gripper on myAGV</h6>
-                            </div>
-                            <div class="col-4 col-12-medium">
-                                <span class="image fit"><img src="images/robots/nova5.png" alt="Dobot Nova5" style="width: 71%;
-    margin: auto; padding: 1em;" /></span>
-                                <h6 style="text-align:center">Dobot Nova5</h6>
-                            </div>
-                            <div class="col-4 col-12-medium">
-                                <span class="image fit"><img src="images/robots/rccars.jpeg" alt="RC cars" style="padding: 1em;"/></span>
-                                <h6 style="text-align:center">Autonomous Vehicle Research Platform</h6>
-                            </div>
-                        </div>
+                        <h2>Robots in Action</h2>
+                            <p>Different possible real-life scenarios that our robots might be able to perform.</p>
 
-                            </section>
-                            <span class="image main"><img src="images/robots/robots_in_simulation.png" alt="myAgv" /></span>
-					</div>
-				</section>
+                            <p style="font-style: italic; font-size: small">We used Sora AI that generated those images to better visualise/represent those scenarios that are still under research/development.</p>
+                        <section id="robotsinaction" class="spotlight-item">
+                            <div class="column">
+                                <div class="col-4 col-12-medium" style="text-align: center">
+                                    <span class="image fit" style="display: inline-block; width: 60%; height: 60%; overflow: hidden; margin-top: 10px;">
+                                        <img src="images/robots/rescue_scenario.png" alt="Robot dog rescue mission after earthquake"
+                                             style="height: auto; max-width: 100%; display: block; margin: auto;" />
+                                    </span>
+                                    <h6 style="text-align:center; font-size: large">Rescue scenario — Autonomous Unitree Go2 quadruped robot searching for survivors after a powerful earthquake</h6>
+                                </div>
+                                <div class="col-4 col-12-medium" style="text-align: center">
+                                    <span class="image fit" style="display: inline-block; width: 60%; height: 60%; overflow: hidden;">
+                                        <img src="images/robots/warehouse_scenario.png" alt="Dobot Nova5 robotic arm and myAGV mobile robot performing a package pickup"
+                                             style="height: auto; max-width: 100%; display: block; margin: auto;" />
+                                    </span>
+                                    <h6 style="text-align:center; font-size: large">Warehouse scenario — Autonomous Dobot Nova5 robotic arm carrying a package with the help of the autonomous myAGV mobile robot</h6>
+                                </div>
+                                <div class="col-4 col-12-medium" style="text-align: center">
+                                    <span class="image fit" style="display: inline-block; width: 60%; height: 60%; overflow: hidden; margin-bottom: 10px;">
+                                        <img src="images/robots/autonomous_cars_scenario.png" alt="F1 single-sitter style RC cars performing autonomous driving"
+                                             style="height: auto; max-width: 100%; display: block; margin: auto;" />
+                                    </span>
+                                    <h6 style="text-align:center; font-size: large">Autonomous driving scenario — RC cars, F1 style, having a cooperative/non-egocentric behaviour towards each other</h6>
+                                </div>
+                             </div>
+                        </section>
+                    </div>
+                </section>
 			</div>
 		</div>
 
