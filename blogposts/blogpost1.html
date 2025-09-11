@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<!--
+    Forty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+    <head>
+        <title>Blog Post 1 - CPS-Lab</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+        <style>
+            .bibtex-container {
+                position: relative;
+
+                /* add scrollbar if there is horizontal overflow */
+                overflow-y: auto;
+
+                padding-inline: 0.5rem;
+                padding-block-end: 0.75rem;
+                margin: 0.5rem 0;
+
+                border-radius: 0.75rem;
+
+                font-family: monospace;
+            }
+
+            /* Sticky header of the code block, It is never out of view. */
+            .bibtex-container header {
+                position: sticky;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+
+                /* moves button to end of the header */
+                display: flex;
+                justify-content: end;
+
+                padding-block: 0.25rem;
+            }
+
+            .bibtex-container button {
+                font-size: 0.9rem;
+                background-color: #828282;
+
+                margin-block: auto;
+
+                border: ridge 1px #7b7b7c;
+                border-radius: 5px;
+                text-shadow: #c4c4c4 0 0 2px;
+            }
+
+            .bibtex-container button:hover {
+                background-color: #bcbabb;
+            }
+
+            .media-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-auto-rows: minmax(200px, auto);
+                gap: 20px;
+                padding: 20px;
+                align-items: center;
+            }
+
+            .media-item {
+                background-color: transparent;
+                border-radius: 8px;
+                overflow: hidden;
+                text-align: justify;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .media-item img,
+            .media-item iframe {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                flex-grow: 1;
+            }
+
+            .caption {
+                padding: 10px;
+                font-size: 0.9rem;
+                color: antiquewhite;
+                text-align: justify;
+            }
+
+            iframe {
+                aspect-ratio: 16/9;
+            }
+        </style>
+    </head>
+
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="../index.html" class="logo"><strong>Cyber-physical Systems Lab</strong> <span>at Uppsala University</span></a>
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <ul class="links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../team.html">Team</a></li>
+                    <li><a href="../blogpostslanding.html">Blog Posts</a></li>
+                    <li><a href="../openpositions.html">Open Positions</a></li>
+                    <li><a href="../researchtopics.html">Research Topics</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
+            <div id="main" class="alt">
+
+                <!-- One -->
+                <section id="one">
+                    <div class="inner">
+                        <h1 style="margin: 0 0 0 0;border-bottom: 2px solid white">
+                            Enabling Symbiosis in Multi-Robot Systems via MARL (ICPS 2025)
+                        </h1>
+                        <h5>Post's content provided by: Xuezhi</h5>
+
+                        <p style="text-align:justify">
+                            <strong>Authors:</strong> Xuezhi Niu, Natalia Calvo Barajas and Didem Gürdür Broo
+                            <br/>
+                            Multi-robot systems often waste energy and time because agents act in isolation. We frame coordination as <strong>symbiosis:</strong>
+                            agents share essential state (battery) during training so policies learn to cooperate under CTDE. We implement a VDN-style
+                            MARL with a centralized critic and decentralized execution; the critic sees each robot’s battery, encouraging cooperative
+                            charging and task allocation. In a warehouse case (2 AMRs, continuous jobs), this improves delivery time and balances
+                            workload/energy. In simulation, symbiotic MARL cuts <strong>task completion time by 10.7%</strong> and improves
+                            <strong>workload/energy balance by 13.81%</strong> on average vs. non-symbiotic/heuristic baselines.
+                        </p>
+
+
+                        <h3>Introduction</h3>
+                            <p style="text-align:justify">
+                                Warehouse robot teams must coordinate charging and delivery under partial observability and shared resources. We study
+                                a core question: <strong>can minimal state sharing (battery levels only) during CTDE improve cooperation in heterogeneous
+                                AMRs</strong>? We implement a VDN-based MARL where a centralized critic observes team batteries and trains decentralized
+                                policies to schedule charging and allocate tasks. We take inspiration from <strong>mycorrhizal networks</strong>: sharing a
+                                minimal vital signal (battery) enables cooperative resource use. During training, agents expose battery state to the critic;
+                                at execution, each runs locally. This reduces interference (e.g., charger contention) and stabilizes learning.
+                                <br/>
+                                Formally, each agent learns an individual \(Q^{*i}(s^i,a^i)\) and an online \(Q^i(\tilde{s}^i,a^i)\) where
+                                \(\tilde{s}^i= [s_t^i, b_t^1, \ldots, b_t^{i-1}, b_t^{i+1}, b_t^n]\); the team value is \(Q^{\text{tot}}(\tilde{s}_t, a_t)
+                                \gets \sum_{i=1}^N Q^i(\tilde{s}_t^i, a_t^i)\). Rewards combine a <strong>local</strong> term (deliveries, low-battery penalty)
+                                and a <strong>global</strong> term (task/energy balance, collision at chargers).
+                            </p>
+
+
+                        <h3>Symbiosis Mechanism</h3>
+                            <p style="text-align:justify">
+                                Symbiosis is integrated into the framework by augmenting state representations with battery levels for all agents, enabling the
+                                critic to optimize energy efficiency and cooperative task allocation. For each agent \(i\), the online Q-network is updated by:
+                                $$ Q^i_{t}(\tilde{s}^i_t,a^i_t)\leftarrow Q^i_t(\tilde{s}^i_t,a^i_t)+\alpha (r_t+\gamma \max\limits_{a^i_{t}}
+                                Q^{*i}_{t}(s^i_{t},a_{t}^i) - Q^i_t(\tilde{s}^i_t,a^i_t)) $$
+
+                                where \(Q^i_t(\tilde{s}^i_t,a^i_t)\) is the online Q-value at time \(t\) for symbiotic states \(\tilde{s}^i_t\) and action \(a^i_t\),
+                                \(\alpha\) is the learning rate controlling the magnitude of updates, and \(Q^{*i}\) represents the individual target Q-value function
+                                with local states \(s^i_t\). The target network is updated periodically as \(Q^{*i}_{t}(s^i_t,a^i_t)\leftarrow Q^{i}t(s_t,a_t) +
+                                \tau (Q^i{t}(\tilde{s}_t,a_t) - Q^*_t(s_t,a_t))\).
+                            </p>
+
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <img src="../images/blogposts/images/state_diag.svg" alt="state diagram">
+                                </div>
+
+                                <div class="media-item">
+                                    <img src="../images/blogposts/images/algorithm.png" alt="Algorithm">
+                                    <div class="caption">Agents share battery information via symbiosis connections (blue dashed lines) while
+                                        maintaining individual Q-networks for local decision-making. The framework integrates environment sampling
+                                        (orange arrows), symbiotic information sharing, and learning.
+                                    </div>
+                                    <img src="../images/blogposts/images/pic_alg.jpg" alt="pseudo code algorithm">
+                                </div>
+                            </div>
+
+                            <p style="text-align:justify">
+                                The centralized critic \(Q^{\text{tot}} \left( \tilde{s}_t , a_t \right)\) is defined as the sum of online Q-values,
+                                \(Q^{\text{tot}} ( \tilde{s}t, a_t ) = \sum{i=1}^N Q^i \left( \tilde{s}_t^i, a_t^i \right)\), where \(\tilde{s}_t^i\) includes agent
+                                \(i\)’s current state \(s_t^i\) and the battery levels of all other agents. This joint value guides the loss computation,
+                                \(L = \mathbb{E} [\left( y^\text{tot}_t - Q^{\text{tot}}_t \right)^2]\), with the target \(y^\text{tot}_t = r_t + \gamma
+                                \max\limits_{ \mathbf{a}_{t+1} } Q^{\text{tot}} \left( s_{t+1}, \mathbf{a}_{t+1} \right)\). The loss is backpropagated during training,
+                                enabling the critic to learn a joint policy that incorporates symbiotic information for coordinated behavior. The centralized critic
+                                evaluates group-level symbiotic metrics, while agents act based on local observations, supporting cooperation and scalability.
+                            </p>
+
+
+                        <h3>Warehouse Case and Actions</h3>
+                            <p style="text-align:justify">
+                                Environment: 60 m × 60 m, one loading station, three unloading stations, two chargers, obstacles/restricted areas. Two AMRs repeatedly
+                                load-deliver-unload; chargers are also start locations. Actions: <strong>continue, recharge at station 1, recharge at station 2</strong>.
+                                Chargers are randomized per episode for robustness.
+                            </p>
+
+                            <div class="media-grid">
+                                <!-- Image with caption -->
+                                <div class="media-item">
+                                    <img src="../images/blogposts/images/architecture.png" alt="block diagram of the system architecture">
+                                    <div class="caption">Overview of the multi-robot warehouse system architecture. The diagram shows control loops,
+                                        including the plant, local controllers, and global controller. The plant models robot dynamics, energy
+                                        consumption, and behaviors. Local controllers manage path planning and execution, while the global controller
+                                        handles collision avoidance, task allocation, and integrates the MARL planner for optimized task execution and
+                                        energy management
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <img src="../images/blogposts/images/mapHRI.png" alt="Simulated warehouse layout">
+                                    <div class="caption">Simulated warehouse layout (60m x 60m) highlighting key areas: one loading station, three
+                                        unloading stations (Unloading 1–3), and two charging stations (Charging 1–2). Blue and green lines show
+                                        example robot trajectories; black regions indicate obstacles and restricted areas.
+                                    </div>
+                                </div>
+
+                                <div class="media-item">
+                                    <iframe src="../images/blogposts/videos/robot_simulation.mp4"
+                                            title="Simulation video"
+                                            allow="fullscreen"
+                                            style="border: 0">
+                                    </iframe>
+
+                                    <p style="text-align:justify">
+                                        <strong>Robots:</strong> Simulation matches reported endurance (~180 min). <strong>Observations:</strong> per-agent
+                                        [delivered%,\(b_t\),\(b_{t-1}\)](normalized). <strong>Rewards:</strong> local delivery bonus + sharp penalty for
+                                        \(b_t < 10\%\); global term penalizes charger conflicts and balances workload. <strong>Learning:</strong> VDN with
+                                        double-DQN style targets; soft target updates; CTDE with battery sharing only. Notes (for practitioners).
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        <h3>Results at a Glance</h3>
+                            <p style="text-align:justify; margin-bottom: 3px;">
+                                Training curves show earlier reward gains and steadier package throughput under Sym-MARL; non-symbiotic baselines plateau and show
+                                imbalance (“lazy” agent). Evaluation against Static Recharging (threshold-based policy) confirms better completion time and fairer
+                                task/energy split across milestones (200–500 packages).
+                            </p>
+
+                            <ul>
+                                <li>Faster completion: −10.7% time.</li>
+                                <li>Fairer distribution: −13.81% variance in tasks/energy.</li>
+                                <li>Fewer simultaneous low-battery events and less charger contention.</li>
+                            </ul>
+
+
+                        <h3>Citation</h3>
+                            <p style="text-align:justify">
+                                If you find the idea useful, please consider citing our work:
+                            </p>
+
+                            <div class="bibtex-container">
+                                <pre tabindex="0" style="background-color: #272822">
+                                    <header><button onclick="copyBibtex(this)">Copy citation</button></header>
+                                    <code class="language-latex" style="white-space: pre-line">
+                                        @inproceedings{niu2025enabling,
+                                        title     = {Enabling Symbiosis in Multi-Robot Systems Through Multi-Agent Reinforcement Learning},
+                                        author    = {Niu, Xuezhi and Barajas, Natalia Calvo and Broo, Didem Gürdür},
+                                        booktitle = {2025 IEEE 8th International Conference on Industrial Cyber-Physical Systems (ICPS)},
+                                        year      = {2025},
+                                        doi       = {10.1109/ICPS65515.2025.11087893},
+                                        pages     = {1--7}
+                                        }
+                                    </code>
+                                </pre>
+                            </div>
+
+
+                        <h3>Post meta</h3>
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <img src="../images/blogposts/images/tech_tour_1.jpg" alt="Tech Tour">
+                                    <div class="caption">Technical tour at Volkswagen’s Emden plant (est. 1964): longtime home of the Passat,
+                                        now upgraded for EVs like the ID.7; on the North Sea with its own export port. Xuezhi is third from the
+                                        right.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <img src="../images/blogposts/images/tech_tour_2.jpg" alt="Tech Tour">
+                                    <div class="caption">Technical tour at Meyer Werft, Papenburg (founded 1795). A leading cruise-ship yard with
+                                        covered docks for year-round builds. Xuezhi is fifth from the right.
+                                    </div>
+                                </div>
+
+                                <div class="media-item">
+                                    <img src="../images/blogposts/images/gala_dinner_1.jpg" alt="Gala dinner">
+                                    <div class="caption">Gala Dinner!</div>
+                                </div>
+                            </div>
+
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <img src="../images/blogposts/images/gala_dinner_2.jpg" alt="Gala dinner">
+                                    <div class="caption">Gala dinner with colleagues at the conference; Xuezhi is second from left.</div>
+                                </div>
+                            </div>
+
+
+                        <h3 style="margin-bottom: 0;">Slides</h3>
+                            <a href="../images/blogposts/files/ICPS.pdf" target="_blank"><i class="fa fa-file-pdf-o"> ICPS.pdf</i></a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Copy content from citation to clipboard -->
+        <script>
+            function copyBibtex(button) {
+                const container = button.parentElement.parentElement;
+                const bibtex = container.querySelector('code').innerText;
+                navigator.clipboard.writeText(bibtex).then(() => {
+                    button.innerText = 'Citation copied!';
+                    setTimeout(() => button.innerText = 'Copy citation', 1500);
+                });
+            }
+        </script>
+
+        <!-- Contact - automatically fetches data from the contact.html file
+        modifying in all other HTML files which have
+        this script without the manual copy-paste for further changes -->
+        <script>
+            fetch('../contact.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+                    })
+        </script>
+
+        <!-- Footer - automatically fetches data from the contact.html file
+        modifying in all other HTML files which have
+        this script without the manual copy-paste for further changes -->
+        <script>
+            fetch('../footer.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+                    })
+        </script>
+
+        <!-- Scripts -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </body>
+</html>
