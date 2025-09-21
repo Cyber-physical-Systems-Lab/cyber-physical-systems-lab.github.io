@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<!--
+    Forty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+    <head>
+        <title>Blog Post 1 - CPS-Lab</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+        <style>
+            .bibtex-container {
+                position: relative;
+
+                /* add scrollbar if there is horizontal overflow */
+                overflow-y: auto;
+
+                padding-inline: 0.5rem;
+                padding-block-end: 0.75rem;
+                margin: 0.5rem 0;
+
+                border-radius: 0.75rem;
+
+                font-family: monospace;
+            }
+
+            /* Sticky header of the code block, It is never out of view. */
+            .bibtex-container header {
+                position: sticky;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+
+                /* moves button to end of the header */
+                display: flex;
+                justify-content: end;
+
+                padding-block: 0.25rem;
+            }
+
+            .bibtex-container button {
+                font-size: 0.9rem;
+                background-color: #828282;
+
+                margin-block: auto;
+
+                border: ridge 1px #7b7b7c;
+                border-radius: 5px;
+                text-shadow: #c4c4c4 0 0 2px;
+            }
+
+            .bibtex-container button:hover {
+                background-color: #bcbabb;
+            }
+
+            .media-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-auto-rows: minmax(200px, auto);
+                gap: 20px;
+                padding: 20px;
+                align-items: center;
+            }
+
+            .media-item {
+                background-color: transparent;
+                border-radius: 8px;
+                overflow: hidden;
+                text-align: justify;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .media-item img,
+            .media-item iframe {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                flex-grow: 1;
+            }
+
+            .caption {
+                padding: 10px;
+                font-size: 0.9rem;
+                color: antiquewhite;
+                text-align: justify;
+            }
+
+            iframe {
+                aspect-ratio: 16/9;
+            }
+        </style>
+    </head>
+
+    <body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="../index.html" class="logo"><strong>Cyber-physical Systems Lab</strong> <span>at Uppsala University</span></a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../team.html">Team</a></li>
+                <li><a href="../blogpostslanding.html">Blog Posts</a></li>
+                <li><a href="../openpositions.html">Open Positions</a></li>
+                <li><a href="../researchtopics.html">Research Topics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main" class="alt">
+
+            <!-- One -->
+            <section id="one">
+                <div class="inner">
+                    <h1 style="margin: 0 0 0 0;border-bottom: 2px solid white">
+                        Optimal Gait Control for a Tendon-driven Soft Quadruped Robot by Model-based Reinforcement Learning (ICRA 2025)
+                    </h1>
+                    <h5>Post's content provided by: Xuezhi</h5>
+
+                    <p style="text-align:justify">
+                        <strong>Authors:</strong> Xuezhi Niu*, Kaige Tan*, Didem Gürdür Broo and Lei Feng
+                        <br/>
+                        Soft quadrupeds are lightweight and safe around people, but their deformable bodies make gait control hard. We use <strong>model-based
+                        reinforcement learning</strong> (MBRL) with a <strong>learned surrogate model</strong> plus <strong>post-training</strong> (PT)
+                        in high-fidelity Simscape to get fast, stable gaits for <strong>SoftQ</strong>, a tendon-driven quadruped with four compressible
+                        soft actuators. Compared with model-free RL and an expert trot controller, our policy is faster, more stable, and more energy-efficient.
+                    </p>
+
+                    Highlights:
+                    <ul>
+                        <li>Surrogate-guided SAC converges quicklyon the proxy model, then PT refines the policy on Simscape.</li>
+                        <li>Reduced action/state spaces via gait parametrization and IK improve training efficiency and safety.</li>
+                    </ul>
+
+                    <h3>Introduction</h3>
+                        <p style="text-align:justify">
+                            Our previous studies (<a href="https://doi.org/10.1109/IROS47612.2022.9981314" target="_blank">Ji et al., 2022</a>,
+                            <a href="https://doi.org/10.1016/j.rcim.2022.102382" target="_blank">Ji et al., 2022</a>) develop
+                            <strong>SoftQ</strong> (<u>Soft</u> <u>Q</u>uadruped),
+                            a soft quadruped robot enabled by four Compressible Tendon-driven Soft Actuators (CTSAs) as legs. However, two limitations
+                            are observed during the learning-based gait design. First, the underlying simulation model of the SoftQ by SimScape is
+                            accurate but time-consuming, necessitating around 30 seconds of computation for each elapsed physical second. Second, we
+                            performed an end-to-end control by directly using the motor output as the action space. Despite the simplicity, it is
+                            inefficient for mobile robots due to the generation of numerous unfeasible or redundant leg motor position combinations,
+                            by which the learning process does not exploit the model knowledge of the SoftQ.
+                        </p>
+
+                        <h4 style="margin-bottom: 0;">Why soft quadrupeds?</h4>
+                        <ul>
+                            <li><strong>Affordability:</strong> 3D-printable CTSAs simplify fabrication and maintenance</li>
+                            <li><strong>Efficiency:</strong> Reduced mass lowers energy consumption during locomotion</li>
+                            <li><strong>Safety:</strong> Soft robots are lightweight and safe to interact with, ideal for dynamic environments</li>
+                        </ul>
+
+
+                    <h3>”Model” Explained</h3>
+                        <p style="text-align:justify">
+                            The SoftQ is characterized by its innovative utilization of four CTSAs. Provides an illustration of the robot, including
+                            orientation (roll \(\theta_x\), pitch \(\theta_y\), and yaw \(\theta_z\)), translational velocities along three axes
+                            (\(v_x, v_y, v_z\)), and contact forces on its four feet (\(f_\textrm{nFL}, f_\textrm{nFR}, f_\textrm{nRL}, f_\textrm{nRR}\),
+                            FL = front left, RR = rear right). The defining characteristic of the CTSAs is the cable-driven mechanism, which can
+                            continuously bend and twist. The cables, also referred to as tendons, guide the deformation of soft materials. Each leg of
+                            the robot is actuated by three cables, controlled by three servo motors, resulting in a total of 12 actuators for the robot's
+                            overall motion. Thus, the direct control input to each leg is a vector
+                            \(\mathbf{d}_\textrm{ten} = \left[d_\textrm{A}, d_\textrm{B}, d_\textrm{C}\right]^\top\). As illustrated in , the tendon
+                            force is applied to the actuator and activates its deformation, and \(\mathbf{d}_\textrm{ten}\) controls the deformation
+                            degree on each leg.
+                        </p>
+
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/robots.jpg" alt="Overview of SoftQ and CTSA">
+                                <div class="caption">Overview of SoftQ and CTSA: (a) Rendered robot with key states.
+                                    (b) CTSA bending angle \(\alpha_b\). (c) CTSA rotational angle \(\alpha_r\).
+                                    (d) CTSA compression length \(z_\textrm{l}\).
+                                </div>
+                            </div>
+                        </div>
+
+                        <p style="text-align:justify">
+                            Based on the control input definition, a leg's pose during the walking can be characterized by three values illustrated
+                            in. \(\alpha_\textrm{b}\) is the bending angle of a leg, \(\alpha_\textrm{r}\) is the rotational angle of a leg, and
+                            \(z_\textrm{l}\) is the compression length of a leg. A combination of the three values defines the pose of the leg
+                            \(\mathbf{a} = [\alpha_\textrm{b}, \alpha_\textrm{r}, z_\textrm{l}]^\top\). The pose and the movements of the three servo
+                            motors satisfy the inverse kinematic model with
+
+                            $$\mathbf{d}_\textrm{ten} = g_\textrm{inv}(\mathbf{a}) = f_\textrm{inv}([\alpha_\textrm{b}, \alpha_\textrm{r}]^\top) +
+                            \textbf{1} z_\textrm{l},$$
+
+                            where \(f_\textrm{inv}: \mathbb{R}^2 \rightarrow \mathbb{R}^3\) is derived through geometric analysis, and
+
+                            $$d_\textrm{A} = R_\textrm{d} \alpha_\textrm{b} \cos(\alpha_\textrm{r})+z_l,\\
+                            d_\textrm{B} = R_\textrm{d} \alpha_\textrm{b} \cos(\alpha_\textrm{r}+\frac{2\pi}{3})+z_l,\\
+                            d_\textrm{C} = R_\textrm{d} \alpha_\textrm{b} \cos(\alpha_\textrm{r}+\frac{4\pi}{3})+z_l.$$
+
+                            The vector of tendon displacement \(\mathbf{d}_\textrm{ten}\) is further used as the motor reference for the low-level
+                            position control. The synchronization of the designed trajectory on \(\mathbf{a}\) and \(\mathbf{d}_\textrm{ten}\) of
+                            each leg will lead to a gait pattern of the robot.
+                        </p>
+
+                        <h4 style="margin-bottom: 0;">Model-based Reinforcement Learning</h4>
+                        <ul>
+                            <li><strong>Surrogate model:</strong> DNN \(\hat{f}_\theta (\mathbf{s},\mathbf{a})\) trained on ~250 randomized rollouts
+                                from Simscape, predicting next state from current state and action. New interactive actions
+                                \([\alpha_{\textrm{b}_\textrm{1}}, z_{\textrm{l}_\textrm{1}},\alpha_{\textrm{b}_\textrm{2}},
+                                z_{\textrm{l}_\textrm{2}}]\) from domain knowledge.
+                            </li>
+                            <li><strong>Policy/algorithm:</strong> Reuse the surrogate to train SAC policy; Post Training reuses the converged SAC
+                                policy and fine-tunes on Simscape with adjusted learning rates and reward coefficients.
+                            </li>
+                            <li><strong>Reward:</strong> Track forward speed, stay upright, discourage jerky and over-bent legs; includes
+                                action-acceleration and posture penalties.
+                            </li>
+                        </ul>
+
+
+                    <h3 style="margin-bottom: 0;">How the model is built</h3>
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/experiment.jpg" alt="Construction of the model">
+                            </div>
+                        </div>
+
+                        <ol>
+                            <li><strong>Surrogate Fitting:</strong> Train a Deep Neural Network (DNN) \(\hat f_\theta\) to approximate the robot dynamics.</li>
+                            <li><strong>RL with Surrogate:</strong> Train RL policy with the surrogate model using Soft Actor-Critic (SAC).</li>
+                            <li><strong>Post Train:</strong> Refine the learned policy in the full SimScape model to close the reality gap.</li>
+                        </ol>
+
+
+                    <h3 style="margin-bottom: 0;">Results at a Glance</h3>
+                        <ul>
+                            <li><strong>Training speed:</strong> MBRL+PT converges in ~60 episodes on Simscape; model-free RL needs ~450 episodes.
+                                Time efficient 10.5 h (avg) vs 22.6 h (MFRL).</li>
+                            <li><strong>Energy efficiency:</strong> Cost of Transport ≈68 J/kg/m (avg) vs 501 J/kg/m for model-free; expert trot
+                                ≈ 81 J/kg/m.</li>
+                            <li><strong>Stability score:</strong> 0.65 (avg) vs 0.03 for model-free.</li>
+                            <li><strong>Speed (simulation):</strong> Up to 0.36 m/s; average 0.26 m/s across settings.</li>
+                            <li><strong>Speed (real robot): </strong> ~0.15 m/s on SoftQ with onboard sensing, improving prior model-free baseline
+                                (~0.05 m/s).</li>
+                        </ul>
+
+
+                    <h3>From simulation to hardware</h3>
+                        <p style="text-align:justify">
+                            We deploy the controller on SoftQ using a Raspberry Pi + STM32 stack, 50 ms control step, IMU and ToF sensors, and
+                            PD motor loops. A simple expert trot is used for short warm-starts during PT; Kalman filtering and contact binarization
+                            help with noise. The robot walks 1.5 m and stops at 0.1 m from a wall, matching the learned behavior.
+                        </p>
+
+                    <h3>Citation</h3>
+                        <p style="text-align:justify">
+                            If you find the idea useful, please consider citing our work:
+                        </p>
+
+                        <div class="bibtex-container">
+                                        <pre tabindex="0" style="background-color: #272822">
+                                            <header><button onclick="copyBibtex(this)">Copy lines</button></header>
+                                            <code class="language-latex" style="white-space: pre-line">
+                                                @inproceedings{niu2025optimal,
+                                                author = {Niu, Xuezhi and Kaige, Tan and Broo, Didem Gürdür and Lei, Feng},
+                                                publisher = {IEEE},
+                                                series = {2025 IEEE International Conference on Robotics and Automation (ICRA)},
+                                                title = {{Optimal Gait Control for a Tendon-driven Soft Quadruped Robot by Model-based Reinforcement Learning}},
+                                                year = {2025}
+                                                }
+                                            </code>
+                                        </pre>
+                        </div>
+
+
+                    <h3>Event Gallery</h3>
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/presenting.jpg" alt="Presenting at conference">
+                                <div class="caption">Xuezhi presenting at the conference.</div>
+                            </div>
+
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/poster_explanation.jpg" alt="Explaining the poster">
+                                <div class="caption">Xuezhi explains the poster to interested attendees.</div>
+                            </div>
+                        </div>
+
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/entrance.png" alt="Photo at the entrance">
+                                <div class="caption">Welcome to ICRA 2025. Photo taken at the entrance.</div>
+                            </div>
+                        </div>
+
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/robots_dancing.jpg" alt="Robots dancing">
+                                <div class="caption">Robots dancing with humans.</div>
+                            </div>
+
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/competition.png" alt="Grand Prix Competition">
+                                <div class="caption">The 24th Roboracer Autonomous Grand Prix Competition</div>
+                            </div>
+                        </div>
+
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=491644853&bvid=BV1aN411E7VF&cid=1287133508&p=1&autoplay=0"
+                                        title="Training results in simulation"
+                                        allow="fullscreen"
+                                        style="border: 0">
+                                </iframe>
+                            </div>
+
+                            <div class="media-item">
+                                <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=276667644&bvid=BV15F41127tu&cid=1287133930&p=1&autoplay=0"
+                                        title="Training process in simulation"
+                                        allow="fullscreen"
+                                        style="border: 0">
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <h4 style="margin-bottom: 0;">Poster</h4>
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/ICRA2025Poster.jpg" alt="Poster photo">
+                            </div>
+                        </div>
+
+
+                    <h3 style="margin-bottom: 0;">Slides</h3>
+                        <a href="../images/blogposts/files/ICRA.pdf" target="_blank"><i class="fa fa-file-pdf-o"> ICRA.pdf</i></a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Copy content from citation to clipboard -->
+    <script>
+        function copyBibtex(button) {
+            const container = button.parentElement.parentElement;
+            const bibtex = container.querySelector('code').innerText;
+            navigator.clipboard.writeText(bibtex).then(() => {
+                button.innerText = 'Copied lines!';
+                setTimeout(() => button.innerText = 'Copy lines', 1500);
+            });
+        }
+    </script>
+
+    <!-- Contact - automatically fetches data from the contact.html file
+    modifying in all other HTML files which have
+    this script without the manual copy-paste for further changes -->
+    <script>
+        fetch('../contact.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+            })
+    </script>
+
+    <!-- Footer - automatically fetches data from the contact.html file
+    modifying in all other HTML files which have
+    this script without the manual copy-paste for further changes -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+            })
+    </script>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </body>
+</html>

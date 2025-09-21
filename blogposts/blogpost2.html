@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<!--
+    Forty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+    <head>
+        <title>Blog Post 2 - CPS-Lab</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+        <style>
+            .bibtex-container {
+                position: relative;
+
+                /* add scrollbar if there is horizontal overflow */
+                overflow-y: auto;
+
+                padding-inline: 0.5rem;
+                padding-block-end: 0.75rem;
+                margin: 0.5rem 0;
+
+                border-radius: 0.75rem;
+
+                font-family: monospace;
+            }
+
+            /* Sticky header of the code block, It is never out of view. */
+            .bibtex-container header {
+                position: sticky;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+
+                /* moves button to end of the header */
+                display: flex;
+                justify-content: end;
+
+                padding-block: 0.25rem;
+            }
+
+            .bibtex-container button {
+                font-size: 0.9rem;
+                background-color: #828282;
+
+                margin-block: auto;
+
+                border: ridge 1px #7b7b7c;
+                border-radius: 5px;
+                text-shadow: #c4c4c4 0 0 2px;
+            }
+
+            .bibtex-container button:hover {
+                background-color: #bcbabb;
+            }
+
+            .media-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-auto-rows: minmax(200px, auto);
+                gap: 20px;
+                padding: 20px;
+                align-items: baseline;
+            }
+
+            .media-item {
+                background-color: transparent;
+                border-radius: 8px;
+                overflow: hidden;
+                text-align: justify;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .media-item img,
+            .media-item iframe {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                flex-grow: 1;
+            }
+
+            .caption {
+                padding: 10px;
+                font-size: 0.9rem;
+                color: antiquewhite;
+                text-align: justify;
+            }
+
+            iframe {
+                aspect-ratio: 16/9;
+            }
+        </style>
+    </head>
+
+    <body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="../index.html" class="logo"><strong>Cyber-physical Systems Lab</strong> <span>at Uppsala University</span></a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../team.html">Team</a></li>
+                <li><a href="../blogpostslanding.html">Blog Posts</a></li>
+                <li><a href="../openpositions.html">Open Positions</a></li>
+                <li><a href="../researchtopics.html">Research Topics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main" class="alt">
+
+            <!-- One -->
+            <section id="one">
+                <div class="inner">
+                    <h1 style="margin: 0 0 0 0;border-bottom: 2px solid white">
+                        Investigating Symbiosis in Robotic Ecosystems (ICRAS 2025)
+                    </h1>
+                    <h5>Post's content provided by: Xuezhi</h5>
+
+                    <p style="text-align:justify">
+                        <strong>Authors:</strong> Xuezhi Niu, Didem Gürdür Broo
+                        <br/>
+                        Modern robot teams need reliable coordination under partial observability and differing capabilities. We study a core
+                        question: <strong>can structure inter-agent rewards improve cooperation in heterogeneous multi-robot systems?</strong>
+                        We model interactions via a <strong>symbiosis</strong> lens (mutualism, commensalism, parasitism) and encode partner
+                        impact directly into each agent’s reward.
+                    </p>
+
+
+                    <h3>Introduction</h3>
+                        <p style="text-align:justify">
+                            Formally, for agent \(i\) we use:
+                            $$ R_i = \alpha P_i + \beta \sum_{j \neq i} \Delta P(a_i, a_j),$$
+                            where \(P_i\) is task performance for \(i\) and \(\Delta P(a_i, a_j)\) measures the marginal effect of \(i\)’s action
+                            on partner \(j\). This keeps local learning objectives while shaping behavior toward cooperative equilibrium.
+                            We integrate this reward into standard policy-gradient MARL (e.g., MAPPO variants) with minimal overhead and evaluate
+                            on <strong>high-dimensional manipulation</strong> (ShadowHand object passing) and <strong>mobile manipulation</strong>.
+                            The result is <strong>more stable training</strong> and <strong>lower variance</strong> than plain rewards.
+                        </p>
+
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/CartPendulum.gif" alt="Cart Pendulum">
+                                <h5>CartPendulum</h5>
+                                <h5 style="border-bottom: 1px solid white"></h5>
+                                <h6><strong>Cooperative Balancing:</strong> Multiple agents control different aspects of the double cart-pendulum system,
+                                    requiring coordinated actions to maintain balance.
+                                </h6>
+                            </div>
+
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/ShadowHand.gif" alt="Shadow Hand">
+                                <h5>ShadowHand</h5>
+                                <h5 style="border-bottom: 1px solid white"></h5>
+                                <h6><strong>Shadow Hand Object Passing:</strong> Multiple agents controlling different finger groups of the dexterous hand,
+                                    collaborating through shared rewards to manipulate and pass objects with precision.
+                                </h6>
+                            </div>
+
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/MobileFranka.gif" alt="Mobile Franka">
+                                <h5>MobileFranka</h5>
+                                <h5 style="border-bottom: 1px solid white"></h5>
+                                <h6><strong>Mobile Manipulation:</strong> Combining base movement and arm control agents that benefit from shared reward
+                                    signals to perform coordinated navigation and manipulation tasks.
+                                </h6>
+                            </div>
+                        </div>
+
+
+                    <h3>Symbiotic Reward Modeling</h3>
+                        <p style="text-align:justify">
+                            A key difficulty in multi-agent learning is the explosion of joint behaviors that look promising in isolation but conflict
+                            at execution time. Our reward couples agents via \(\Delta P\), which penalizes harmful interference and reinforces
+                            complementary behaviors.
+                            <br/>
+                            Let \(H = { a_1, \dots, a_n }\) denote a set of heterogeneous robots, where each \(a_i\) has a capability set \(C_i\),
+                            resource vector \(D_i\), and performance function \(P_i\). The interaction between \(a_i\) and \(a_j\) is given by
+                            \(I(a_i, a_j)\), representing performance change due to cooperation. A symbiotic pair satisfies \(I(a_i, a_j) >
+                            \max\{P_i, P_j\} - \delta,\) where \(\delta \geq 0\) accounts for noise. Performance deltas \(\Delta P(a_i, a_j)\)
+                            classify relationships:
+                        </p>
+
+                        <ul>
+                            <li>Mutualism: \(\Delta P(a_i, a_j) > 0\) and \(\Delta P(a_j, a_i) > 0\)</li>
+                            <li>Commensalism: \(\Delta P(a_i, a_j) > 0\) ,  \(\Delta P(a_j, a_i) = 0\)</li>
+                            <li>Parasitism: \(\Delta P(a_i, a_j) > 0\) ,  \(\Delta P(a_j, a_i) < 0\)</li>
+                        </ul>
+
+                        <p style="text-align:justify">
+                            Total system performance for a subset \(S \subseteq H\) is:
+                            $$ P_{\text{total}}(S) = \sum_{a_i \in S} P_i + \sum_{(a_i, a_j) \in E(S)} I(a_i, a_j). $$
+
+                            We embed the reward in a MAPPO-style pipeline and compare against strong PPO-family baselines without symbiosis terms.
+                            When optimality certificates are not required, we emphasize <strong>robust convergence</strong> and <strong>near-optimal performance</strong>
+                            under realistic noise, contact dynamics, and partial observability.
+                            <p>
+                            <strong>Highlights:</strong> The symbiosis variant reaches target success more consistently and with fewer catastrophic
+                            drops during training; bounded-suboptimal tuning (clip, entropy) remains compatible. Across long runs, the symbiosis
+                            reward improves success rates on difficult seeds and reduces outcome spread; it also shortens recovery after rare failures.
+                        </p>
+
+
+                    <h3>Citation</h3>
+                        <p style="text-align:justify">
+                            If you find the idea useful, please consider citing our work:
+                        </p>
+
+                        <div class="bibtex-container">
+                                        <pre tabindex="0" style="background-color: #272822">
+                                            <header><button onclick="copyBibtex(this)">Copy lines</button></header>
+                                            <code class="language-latex" style="white-space: pre-line">
+                                                @inproceedings{niu2025symbiosis,
+                                                title={Investigating Symbiosis in Robotic Ecosystems: A Case Study for Multi-Robot Reinforcement Learning Reward Shaping},
+                                                author    = {Xuezhi Niu and Didem Gürdür Broo},
+                                                booktitle = {the 2025 9th International Conference on Robotics and Automation Sciences (ICRAS)},
+                                                year      = {2025},
+                                                publisher = {IEEE}
+                                                }
+                                            </code>
+                                        </pre>
+                        </div>
+
+
+                    <h3>Event Gallery</h3>
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/icras_session.jpg" alt="Parallel Sessions">
+                                <div class="caption">Parallel Sessions: Intelligent Robots and Machine Vision. Xuezhi is in the second row,
+                                    third from the left.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/icras_common.jpg" alt="Conference Moments">
+                                <div class="caption">Conference moments: the left photo is from the banquet; the two on the right were taken
+                                    during the keynote talks.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    <h3 style="margin-bottom: 0;">Slides</h3>
+                        <a href="../images/blogposts/files/ICRAS.pdf" target="_blank"><i class="fa fa-file-pdf-o"> ICRAS.pdf</i></a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Copy content from citation to clipboard -->
+    <script>
+        function copyBibtex(button) {
+            const container = button.parentElement.parentElement;
+            const bibtex = container.querySelector('code').innerText;
+            navigator.clipboard.writeText(bibtex).then(() => {
+                button.innerText = 'Copied lines!';
+                setTimeout(() => button.innerText = 'Copy lines', 1500);
+            });
+        }
+    </script>
+
+    <!-- Contact - automatically fetches data from the contact.html file
+    modifying in all other HTML files which have
+    this script without the manual copy-paste for further changes -->
+    <script>
+        fetch('../contact.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+            })
+    </script>
+
+    <!-- Footer - automatically fetches data from the contact.html file
+    modifying in all other HTML files which have
+    this script without the manual copy-paste for further changes -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+            })
+    </script>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </body>
+</html>
