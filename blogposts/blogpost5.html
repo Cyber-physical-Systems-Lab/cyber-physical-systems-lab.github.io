@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<!--
+    Forty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>Blog Post 5 - CPS-Lab</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+        <style>
+            /* Sticky header of the code block, It is never out of view. */
+            .bibtex-container header {
+                position: sticky;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+
+                /* moves button to end of the header */
+                display: flex;
+                justify-content: end;
+
+                padding-block: 0.25rem;
+            }
+
+            .bibtex-container button {
+                font-size: 0.9rem;
+                background-color: #828282;
+
+                margin-block: auto;
+
+                border: ridge 1px #7b7b7c;
+                border-radius: 5px;
+                text-shadow: #c4c4c4 0 0 2px;
+            }
+
+            .bibtex-container button:hover {
+                background-color: #bcbabb;
+            }
+
+            .media-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-auto-rows: minmax(200px, auto);
+                gap: 20px;
+                padding: 20px;
+                align-items: center;
+            }
+
+            .media-item {
+                background-color: transparent;
+                border-radius: 8px;
+                overflow: hidden;
+                text-align: justify;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .media-item img,
+            .media-item iframe,
+            .media-item video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                flex-grow: 1;
+            }
+
+            .caption {
+                padding: 10px;
+                font-size: 0.9rem;
+                color: antiquewhite;
+                text-align: justify;
+            }
+
+            .aspect16over9 {
+                aspect-ratio: 16/9;
+            }
+
+            .aspect9over16 {
+                aspect-ratio: 9/16;
+            }
+        </style>
+    </head>
+
+    <body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="../index.html" class="logo"><strong>Cyber-physical Systems Lab</strong> <span>at Uppsala University</span></a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../team.html">Team</a></li>
+                <li><a href="../blogpostslanding1.html">Blog Posts</a></li>
+                <li><a href="../openpositions.html">Open Positions</a></li>
+                <li><a href="../researchtopics.html">Research Topics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main" class="alt">
+
+            <!-- One -->
+            <section id="one">
+                <div class="inner">
+                    <h1 style="margin: 0 0 0 0;border-bottom: 2px solid white">
+                        Our experience at the SciFest 2025 in Uppsala
+                    </h1>
+                    <h5>Post's content provided by: CPS-Lab Team</h5>
+
+                    <h3>Overview</h3>
+                    <p style="text-align:justify">
+                        We participated with the CPS-Lab at the SciFest 2025 in Uppsala. SciFest is a science festival with a wide range
+                        of workshops, shows, competitions, research meetings and lectures. The programme is broad, covering the humanities,
+                        social sciences, natural sciences and medicine. During a walk at SciFest, you can go from digging fossils to programming
+                        Lego robots, then on to looking for spruce bark beetles and making your own historical exhibition. The air is filled with
+                        joy and energy as it pops, bubbles and moves! From 2020 onwards, SciFest is co-organised by Uppsala University and the
+                        Swedish University of Agricultural Sciences. Most of the exhibitors at SciFest come from the two universities in Uppsala,
+                        but there are also authorities, companies, museums and organisations <i>(Information provided from their
+                        <a href="https://www.scifest.se/w/sf/en/about-scifest">own website</a>)</i>.
+                        <br/>
+                        <br/>
+                        This was our first appearance as a Lab for this festival, but several members have been participating with other Labs
+                        and/or research groups. We participated during the whole duration of the SciFest, from Thursday to Saturday. In the first
+                        two days, schools from and around the city were the first ones to experience what we prepared for this year.
+                        We only had drop-in activities this year (maybe in the following ones we can prepare some workshops that can be booked in)
+                        which are the following:
+                    </p>
+
+                    <ol style="margin-left: 40px;">
+                        <li>Sticker giving robotic arm - using a suction pump</li>
+                        <li>Quadruped robotic dog (named Loki) performing a scripted dance session and manual interaction with
+                        participant afterwards</li>
+                    </ol>
+
+                    <h3>Drop-in Activities</h3>
+                    <p style="text-align:justify">
+                        1. We utilized a DOBOT Nova 5 Robotic arm on which we mounted a custom 3D printed frame to adapt the suction pump that
+                        we had (instead of using a normal two-point gripper). By creating a Python script to maneuver the pump, predefined arm
+                        movements using the DobotStudioPro and a TCP connection between those to operate smoothly, we replicated the movement of
+                        "someone" giving a sticker as a price, and you wait for it with your palm raised upwards. We have a small video from the
+                        festival to illustrate this movement:
+                    </p>
+                    <div class="media-grid">
+                        <div class="media-item"></div>
+                        <div class="media-item">
+                            <video class="aspect9over16" src="../images/blogposts/videos/robotic_arm_offering_stickers.mp4" controls muted playsinline></video>
+                            <div class="caption">Nova 5 offering stickers to participants</div>
+                        </div>
+                        <div class="media-item"></div>
+                    </div>
+
+                    <p style="text-align:justify">
+                        2. We utilized an Unitree GO2 Quadruped Robotic Dog in which we prepared some scripts (available in the
+                        <i>Block Programming</i> section from <i>Functions</i>) in order for Loki (given name for the robotic dog)
+                        to showcase a dance sequence to the participants. It was combined with manual movements from a connected controller, but
+                        also from the tablet that operated the script. Besides this, mostly when Loki was "sleeping", we had two other tables
+                        that had the <i>Block Programming</i> section or the <i>Simulator</i> section to play around with the available functionalities
+                        and to discover how to "program" him to do some more complex actions/movements. Sometimes it was accompanied by our very
+                        friendly arachnoidal robot (spider with 6 "legs") that is controlled by a remote via two pairs of transceivers.
+                    </p>
+                    <div class="media-grid">
+                        <div class="media-item">
+                            <video class="aspect16over9" src="../images/blogposts/videos/robot_dog_robot_spider.mp4" controls muted playsinline></video>
+                            <div class="caption">Loki and Crab (given name for the robotic spider) performing a dance together</div>
+                        </div>
+                    </div>
+
+                    <h3>Testimonies - how it was</h3>
+                    <p style="text-align:justify">
+                        Here are some of the thought from our CPS-Lab members that participated in the event:
+                    </p>
+                        <p style="text-align:center">
+                            <i>[Text to be inserted here]</i>
+                        </p>
+                        <h4 style="text-align:center">Didem - CPS-Lab's director</h4>
+
+                        <p style="text-align:center">
+                            <i>[Text to be inserted here]</i>
+                        </p>
+                        <h4 style="text-align:center">Karin</h4>
+
+                        <p style="text-align:center">
+                            <i>[Text to be inserted here]</i>
+                        </p>
+                        <h4 style="text-align:center">Natalia</h4>
+
+                        <p style="text-align:center">
+                            <i>[Text to be inserted here]</i>
+                        </p>
+                        <h4 style="text-align:center">Xuezhi</h4>
+
+                        <p style="text-align:center">
+                            <i>[Text to be inserted here]</i>
+                        </p>
+                        <h4 style="text-align:center">Darius</h4>
+
+
+                    <h3>Event Gallery</h3>
+                    Even more pictures and video from the SciFest!
+                    <br/>
+                    <i><strong>Photo credit:</strong> Team members of the CPS-Lab's personal archive</i>
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/robot_dog_sleeping.jpg" alt="Quadruped robotic dog Loki resting">
+                                <div class="caption">Loki getting some "sleep" before the next dance session</div>
+                            </div>
+
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/nova5_in_action.jpg" alt="Hands waiting to receive a sticker from the
+                                                                                                robotic arm">
+                                <div class="caption">Participants waiting to receive a special gift from our robotic arm</div>
+                            </div>
+                        </div>
+
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/team_picture.jpg" alt="Group photo of the team">
+                                <div class="caption">(Almost) All team members present in one group photo during the event</div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Contact - automatically fetches data from the contact.html file
+    modifying in all other HTML files which have
+    this script without the manual copy-paste for further changes -->
+    <script>
+        fetch('../contact.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+            })
+    </script>
+
+    <!-- Footer - automatically fetches data from the contact.html file
+    modifying in all other HTML files which have
+    this script without the manual copy-paste for further changes -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+            })
+    </script>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </body>
+</html>
