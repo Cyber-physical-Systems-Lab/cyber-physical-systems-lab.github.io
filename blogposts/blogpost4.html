@@ -12,21 +12,6 @@
         <link rel="stylesheet" href="../assets/css/main.css" />
         <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
         <style>
-            .bibtex-container {
-                position: relative;
-
-                /* add scrollbar if there is horizontal overflow */
-                overflow-y: auto;
-
-                padding-inline: 0.5rem;
-                padding-block-end: 0.75rem;
-                margin: 0.5rem 0;
-
-                border-radius: 0.75rem;
-
-                font-family: monospace;
-            }
-
             /* Sticky header of the code block, It is never out of view. */
             .bibtex-container header {
                 position: sticky;
@@ -115,7 +100,7 @@
             <ul class="links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../team.html">Team</a></li>
-                <li><a href="../blogpostslanding.html">Blog Posts</a></li>
+                <li><a href="../blogpostslanding1.html">Blog Posts</a></li>
                 <li><a href="../openpositions.html">Open Positions</a></li>
                 <li><a href="../researchtopics.html">Research Topics</a></li>
             </ul>
@@ -161,34 +146,24 @@
                         of the elements that were frequently suggested by all participants:
                     </p>
 
+
                     <div class="media-grid">
                         <div class="media-item">
                             <img src="../images/blogposts/images/final_designs.png" alt="Summary of elements">
                         </div>
                     </div>
 
-                    <div class="media-grid">
-                        <div class="media-item">
-                            <img src="../images/blogposts/images/photo_roman.jpeg" alt="Photo from the conference">
-                            <div class="caption">Here is also a photo of our presentation at the conference</div>
+                    <h3>Event Gallery</h3>
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/photo_roman.jpeg" alt="Photo from the conference">
+                                <div class="caption">Here is also a photo of our presentation at the conference</div>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </section>
         </div>
     </div>
-
-    <!-- Copy content from citation to clipboard -->
-    <script>
-        function copyBibtex(button) {
-            const container = button.parentElement.parentElement;
-            const bibtex = container.querySelector('code').innerText;
-            navigator.clipboard.writeText(bibtex).then(() => {
-                button.innerText = 'Copied lines!';
-                setTimeout(() => button.innerText = 'Copy lines', 1500);
-            });
-        }
-    </script>
 
     <!-- Contact - automatically fetches data from the contact.html file
     modifying in all other HTML files which have
