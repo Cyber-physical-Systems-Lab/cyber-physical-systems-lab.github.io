@@ -11,6 +11,42 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            .pagination {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+                margin-top: 2cm;
+                margin-bottom: 2cm;
+            }
+
+            .pagination li a {
+                display: block;
+                padding: 8px 12px;
+                text-decoration: none;
+                border: 1px solid gray;
+                color: whitesmoke;
+                margin: 0 4px;
+                border-radius: 5px;
+                transition: background-color 1s;
+            }
+
+            .pagination li a.active {
+                background-color: lightcoral;
+                color: white;
+            }
+
+            .pagination li a:hover:not(.active) {
+                background-color: lightgray;
+            }
+
+            .pagination li a.disabled {
+                color: black;
+                cursor: not-allowed;
+                pointer-events: none;
+            }
+        </style>
 	</head>
 
 	<body class="is-preload">
@@ -32,7 +68,7 @@
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="team.html">Team</a></li>
-					<li><a href="blogpostslanding.html" class="button primary fit">Blog Posts</a></li>
+					<li><a href="blogpostslanding1.html" class="button primary fit">Blog Posts</a></li>
 					<li><a href="openpositions.html">Open Positions</a></li>
 					<li><a href="researchtopics.html">Research Topics</a></li>
 				</ul>
@@ -46,7 +82,9 @@
 						<h1>Blog Posts from our researchers</h1>
 					</header>
 					<p>
-						Page dedicated to our researchers to present their articles.
+                        Explore our researchers' latest insights through blog posts featuring conference highlights,
+                        research breakthroughs, media interviews, and public engagement activities. This collection provides a window
+                        into our lab's ongoing work and its impact on the cyber-physical systems community.
 					</p>
 				</div>
 			</section>
@@ -56,6 +94,36 @@
 
 			<!-- Two -->
 				<section id="two" class="spotlights">
+                    <section>
+                        <a class="image">
+                            <img src="images/blogposts/images/final_designs.png" alt="" data-position="50% 50%" />
+                        </a>
+                        <div class="content">
+                            <div class="inner">
+                                <h3 style="margin: 0 0 0 0;border-bottom: 2px solid white">Crowdsourcing eHMI Designs: A Participatory Approach to
+                                    Autonomous Vehicle-Pedestrian Communication (RO-MAN 2025)
+                                </h3>
+                                <h5>Published on <time datetime="2025-09-25">2025-09-25</time></h5>
+
+                                <p>
+                                    We recently explored how crowdsourcing platforms can be used to design external Human–Machine Interfaces (eHMIs)
+                                    for autonomous vehicles (AVs). These interfaces are key for helping AVs communicate clearly with pedestrians.
+                                </p>
+
+                                <p>
+                                    🪧Paper: <a href="https://arxiv.org/pdf/2506.18605" target="_blank">[Proceedings are not published yet]</a>
+                                    <br/>
+                                    📌Venue: 34th IEEE International Conference on Robot and Human Interactive Communication
+                                    (RO-MAN), Eindhoven, NL, 2025
+                                </p>
+
+                                <ul class="actions">
+                                    <li><a href="blogposts/blogpost4.html" class="button next scrolly">Read more</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
 					<section>
 						<a class="image">
 							<img src="images/blogposts/images/env.jpg" alt="" data-position="25% 25%" />
@@ -63,7 +131,7 @@
 						<div class="content">
 							<div class="inner">
                                 <h3 style="margin: 0 0 0 0;border-bottom: 2px solid white">Enabling Symbiosis in Multi-Robot Systems via MARL (ICPS 2025)</h3>
-                                <h5>Published on <time datetime="2025-09-02">02.09.2025</time></h5>
+                                <h5>Published on <time datetime="2025-09-02">2025-09-02</time></h5>
 
 								<p>
 									We present a CTDE value-decomposition MARL scheme that shares only battery state to induce symbiotic coordination
@@ -92,7 +160,7 @@
 						<div class="content">
 							<div class="inner">
                                 <h3 style="margin: 0 0 0 0;border-bottom: 2px solid white">Investigating Symbiosis in Robotic Ecosystems (ICRAS 2025)</h3>
-                                <h5>Published on <time datetime="2025-09-02">02.09.2025</time></h5>
+                                <h5>Published on <time datetime="2025-09-02">2025-09-02</time></h5>
 
 								<p>
                                     We introduce a symbiosis-guided reward shaping approach for MARL in heterogeneous multi-robot systems.
@@ -125,7 +193,7 @@
                                 <h3 style="margin: 0 0 0 0;border-bottom: 2px solid white">Optimal Gait Control for a Tendon-driven Soft Quadruped Robot
                                     by Model-based Reinforcement Learning (ICRA 2025)
                                 </h3>
-                                <h5>Published on <time datetime="2025-09-02">02.09.2025</time></h5>
+                                <h5>Published on <time datetime="2025-09-02">2025-09-02</time></h5>
 
 								<p>
                                     We first learn a DNN surrogate of the robot’s dynamics from Simscape trajectories, then train SAC on the surrogate
@@ -135,7 +203,7 @@
                                 </p>
 
                                 <p>
-                                    🪧Paper: <a href="" target="_blank">[Waiting publication for proceedings]</a>
+                                    🪧Paper: <a href="https://arxiv.org/pdf/2406.07069v1" target="_blank">[Proceedings are not published yet]</a>
                                     <br/>
                                     📌Venue: IEEE International Conference on Robotics and Automation (ICRA), Atlanta, USA, 2025
                                     <br/>
@@ -148,38 +216,19 @@
 							</div>
 						</div>
 					</section>
-
-                    <section>
-						<a class="image">
-							<img src="images/blogposts/images/final_designs.png" alt="" data-position="50% 50%" />
-						</a>
-						<div class="content">
-							<div class="inner">
-                                <h3 style="margin: 0 0 0 0;border-bottom: 2px solid white">Crowdsourcing eHMI Designs: A Participatory Approach to
-                                    Autonomous Vehicle-Pedestrian Communication (RO-MAN 2025)
-                                </h3>
-                                <h5>Published on <time datetime="2025-09-25">25.09.2025</time></h5>
-
-								<p>
-                                    We recently explored how crowdsourcing platforms can be used to design external Human–Machine Interfaces (eHMIs)
-                                    for autonomous vehicles (AVs). These interfaces are key for helping AVs communicate clearly with pedestrians.
-                                </p>
-
-                                <p>
-                                    🪧Paper: <a href="https://arxiv.org/pdf/2506.18605" target="_blank">[Proceedings are not published yet]</a>
-                                    <br/>
-                                    📌Venue: 34th IEEE International Conference on Robot and Human Interactive Communication
-                                    (RO-MAN), Eindhoven, NL, 2025
-                                </p>
-
-								<ul class="actions">
-									<li><a href="blogposts/blogpost4.html" class="button next scrolly">Read more</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
 				</section>
 			</div>
+
+            <!-- Each page should contain at most 10 blog posts -->
+            <ul class="pagination">
+                <li><a class="disabled" href="#">&laquo;</a></li>
+                <li><a class="active" href="#">1</a></li>
+                <!--<li><a href="#">2</a></li>-->
+                <!--<li><a href="#">3</a></li>-->
+                <!--<li><a href="#">4</a></li>-->
+                <!--<li><a href="#">5</a></li>-->
+                <li><a class="disabled" href="#">&raquo;</a></li>
+            </ul>
 		</div>
 
 	<!-- Contact - automatically fetches data from the contact.html file
