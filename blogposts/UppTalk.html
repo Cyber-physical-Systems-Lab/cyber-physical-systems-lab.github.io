@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<!--
+    Forty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+    <head>
+        <title>Blog Post 5 - CPS-Lab</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+        <style>
+            /* Sticky header of the code block, It is never out of view. */
+            .bibtex-container header {
+                position: sticky;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+
+                /* moves button to end of the header */
+                display: flex;
+                justify-content: end;
+
+                padding-block: 0.25rem;
+            }
+
+            .bibtex-container button {
+                font-size: 0.9rem;
+                background-color: #828282;
+
+                margin-block: auto;
+
+                border: ridge 1px #7b7b7c;
+                border-radius: 5px;
+                text-shadow: #c4c4c4 0 0 2px;
+            }
+
+            .bibtex-container button:hover {
+                background-color: #bcbabb;
+            }
+
+            .media-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                grid-auto-rows: minmax(200px, auto);
+                gap: 20px;
+                padding: 20px;
+                align-items: center;
+            }
+
+            .media-item {
+                background-color: transparent;
+                border-radius: 8px;
+                overflow: hidden;
+                text-align: justify;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .media-item img,
+            .media-item iframe {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                flex-grow: 1;
+            }
+
+            .caption {
+                padding: 10px;
+                font-size: 0.9rem;
+                color: antiquewhite;
+                text-align: justify;
+            }
+
+            iframe {
+                aspect-ratio: 16/9;
+            }
+        </style>
+    </head>
+
+    <body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="../index.html" class="logo"><strong>Cyber-physical Systems Lab</strong> <span>at Uppsala University</span></a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../team.html">Team</a></li>
+                <li><a href="../blogpostslanding1.html">Blog Posts</a></li>
+                <li><a href="../openpositions.html">Open Positions</a></li>
+                <li><a href="../researchtopics.html">Research Topics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main" class="alt">
+
+            <!-- One -->
+            <section id="one">
+                <div class="inner">
+                    <h1 style="margin: 0 0 0 0;border-bottom: 2px solid white">
+                        Our Lab Director Featured in UppTalk:
+                        Multi-Robot Collaboration and Bio-Inspired Systems
+                    </h1>
+                    <!--<h5>Post's content provided by: Ronald</h5>-->
+
+                    <p style="text-align:justify">
+                        We're excited to share that our lab director, Dr. Didem Gürdür Broo, was recently featured in Uppsala University's UppTalk series – a popular science seminar that makes cutting-edge research accessible to alumni and the general public. The 32-minute conversation, hosted by Anneli Björkman at the Blåhus recording studio, offered fascinating insights into our lab's work on multi-robot systems and the future of human-robot collaboration.
+                        <br/>
+                        The interview provided an excellent opportunity to explain what cyber-physical systems actually are – a question we get surprisingly often! As Didem explained, unlike purely software systems or simple IoT devices that primarily collect data, cyber-physical systems operate in a continuous feedback loop. They observe their environment through sensors, take actions through actuators, and then re-observe based on those actions. This real-time interaction between the computational and physical worlds is what makes CPS so powerful and versatile.
+                        <br/>
+                        <iframe width="90%"
+                        src="https://www.youtube.com/watch?v=LMjIdtUQ4_I">
+                        </iframe>
+                        <br/>
+                        A major focus of the conversation was our lab's work on multi-robot systems. Rather than optimizing individual robots, we're interested in understanding how different types of robots can collaborate effectively. As Didem emphasized, we don't just focus on perfecting one type of robot – we deliberately work with diverse platforms:
+                        <ul>
+                          <li>High-precision robotic arms</li>
+                          <li>Mobile platforms with smaller manipulators</li>
+                          <li>Quadruped robots (like our star, Loke!)</li>
+                            <li>Autonomous Robot cars</li>
+                        </ul>
+                        The key questions driving our research: When should they collaborate? How should they communicate? What algorithms we can develop to enable heterogeneous teams to work toward common goals?
+                        <br/>
+                        One of the most compelling parts of the interview explored how biological ecosystems inspire our research approach. During research visits to marine stations in Kristineberg and Askö, Didem observed that thriving ecosystems aren't populated by identical organisms. Instead, diversity – different species, sizes, and capabilities – creates resilience and efficiency.
+                        This principle directly informs our multi-robot research. Just as forests and oceans benefit from biodiversity, robot teams become more capable when they're heterogeneous rather than homogeneous.
+                        The interview included demonstrations of our simulation environments where robots learn through multi-agent reinforcement learning. Instead of explicitly programming every action, we define rewards and penalties, allowing algorithms to discover optimal strategies through trial and error.
+                        <br/>
+                         Examples shown included:
+                        <ul>
+                          <li>Balancing a stick on a moving cube – a classic control problem solved through reward-based learning</li>
+                          <li>Robotic hands passing a ball between each other – demonstrating coordinated manipulation</li>
+                          <li>Mobile bases with robotic arms navigating complex tasks</li>
+                        </ul>
+                        One major advantage of simulation is that we can train hundreds or even thousands of robots simultaneously, something impossible in a physical lab. Once trained, these learned behaviors transfer to our physical robots.
+                    </p>
+
+
+                    <div class="media-grid">
+                        <div class="media-item">
+                            <img src="../images/blogposts/images/final_designs.png" alt="Summary of elements">
+                        </div>
+                    </div>
+
+                    <h3>Event Gallery</h3>
+                        <div class="media-grid">
+                            <div class="media-item">
+                                <img src="../images/blogposts/images/photo_roman.jpeg" alt="Photo from the conference">
+                                <div class="caption">Here is also a photo of our presentation at the conference</div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Contact - automatically fetches data from the contact.html file
+    modifying in all other HTML files which have
+    this script without the manual copy-paste for further changes -->
+    <script>
+        fetch('../contact.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+            })
+    </script>
+
+    <!-- Footer - automatically fetches data from the contact.html file
+    modifying in all other HTML files which have
+    this script without the manual copy-paste for further changes -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+            })
+    </script>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </body>
+</html>
