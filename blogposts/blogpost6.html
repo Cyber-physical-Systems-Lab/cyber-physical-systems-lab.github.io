@@ -69,12 +69,12 @@
                 flex-grow: 1;
             }
 
-            .caption {
-                padding: 10px;
-                font-size: 0.9rem;
-                color: antiquewhite;
-                text-align: justify;
-            }
+            /*.caption {*/
+            /*    padding: 10px;*/
+            /*    font-size: 0.9rem;*/
+            /*    color: antiquewhite;*/
+            /*    text-align: justify;*/
+            /*}*/
 
             iframe {
                 aspect-ratio: 16/9;
@@ -107,63 +107,124 @@
         </nav>
 
         <!-- Main -->
-<!--        <div id="main" class="alt">-->
+        <div id="main" class="alt">
 
-<!--            &lt;!&ndash; One &ndash;&gt;-->
-<!--            <section id="one">-->
-<!--                <div class="inner">-->
-<!--                    <h1 style="margin: 0 0 0 0;border-bottom: 2px solid white">-->
-<!--                        Crowdsourcing eHMI Designs: A Participatory Approach to-->
-<!--                        Autonomous Vehicle-Pedestrian Communication (RO-MAN 2025)-->
-<!--                    </h1>-->
-<!--                    <h5>Post's content provided by: Ronald</h5>-->
+            <!-- One -->
+            <section id="one">
+                <div class="inner">
+                    <h1 style="margin: 0 0 0 0;border-bottom: 2px solid white">
+                        Our Lab Director Featured in UppTalk:
+                        Multi-Robot Collaboration and Bio-Inspired Systems
+                    </h1>
+                    <h5>Post's content provided by: CPS-Lab Team</h5>
 
-<!--                    <p style="text-align:justify">-->
-<!--                        <strong>Authors:</strong> Ronald Cumbal, Didem Gürdür Broo and Ginevra Castellano-->
-<!--                        <br/>-->
-<!--                        We recently explored how crowdsourcing platforms can be used to design external Human–Machine Interfaces (eHMIs) for-->
-<!--                        autonomous vehicles (AVs). These interfaces are key for helping AVs communicate clearly with pedestrians. Participatory-->
-<!--                        design, where users are directly involved in shaping technology, is a well-established method. However, applying crowdsourcing-->
-<!--                        to this process, while still aiming for meaningful engagement, is not something we often see. That’s what makes our approach-->
-<!--                        a little different.-->
-<!--                        <br/>-->
-<!--                        <br/>-->
-<!--                        We presented this work at the RO-MAN Conference in Eindhoven, NL, August 2025. One of the biggest advantages of using crowdsourcing is scalability in participant recruitment. With larger groups, we were able to run statistical tests and uncover significant results, something that’s rarely possible in smaller, traditional participatory studies. For example, here’s what we found about user preferences for the types of information and design elements interfaces should include. The results show clear statistical differences marked with dashed lines:-->
-<!--                    </p>-->
+                    <p style="text-align:justify">
+                        We're excited to share that our lab director, Dr. Didem Gürdür Broo, was recently featured in Uppsala University's UppTalk
+                        series – a popular science seminar that makes cutting-edge research accessible to alumni, and the general public.
+                        The 32-minute conversation, hosted by Anneli Björkman at the Blåsenhus recording studio, offered fascinating insights into our lab's
+                        work on multi-robot systems and the future of human-robot collaboration.
+                        <br/>
+                        The interview provided an excellent opportunity to explain what cyber-physical systems actually are – a question we get surprisingly
+                        often! As Didem explained, unlike purely software systems or simple IoT devices that primarily collect data, cyber-physical systems
+                        operate in a continuous feedback loop. They observe their environment through sensors, take actions through actuators, and then
+                        re-observe based on those actions. This real-time interaction between the computational and physical worlds is what makes CPS so
+                        powerful and versatile.
+                        <br/>
+                        <iframe width="100%"
+                                src="https://www.youtube.com/embed/LMjIdtUQ4_I?si=N6RZ6pfvSQJMEOA1"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                        </iframe>
+                    </p>
 
-<!--                    <div class="media-grid">-->
-<!--                        <div class="media-item">-->
-<!--                            <img src="../images/blogposts/images/rankings.png" alt="Statistical Differences">-->
-<!--                            <div class="caption">Different Rankings</div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <p style="text-align:justify">
+                        A major focus of the conversation was our lab's work on multi-robot systems. Rather than optimizing individual robots,
+                        we're interested in understanding how different types of robots can collaborate effectively. As Didem emphasized, we don't
+                        just focus on perfecting one type of robot – we deliberately work with diverse platforms:
+                    </p>
+                    <ul>
+                        <li>High-precision robotic arms</li>
+                        <li>Mobile platforms with smaller manipulators</li>
+                        <li>Quadruped robots (like our star, Loke!)</li>
+                        <li>Autonomous Robot cars</li>
+                    </ul>
 
-<!--                    <p style="text-align:justify">-->
-<!--                        The main outcome of our work points toward a clear preference of participants to use familiar, established and common-->
-<!--                        elements that produce clear and easily interpretable messages. This pushes a debate on how to balance familiarity with-->
-<!--                        novelty when designing new technology. As AVs need to convey clear information to guarantee safe interactions, we argue-->
-<!--                        that familiarity should remain a stronger focus when deploying AVs to the real world. The following Figure shows a summary-->
-<!--                        of the elements that were frequently suggested by all participants:-->
-<!--                    </p>-->
+                    <p style="text-align:justify">
+                        The key questions driving our research: When should they collaborate? How should they communicate? What algorithms we can develop
+                        to enable heterogeneous teams to work toward common goals?
+                        <br/>
+                        One of the most compelling parts of the interview explored how biological ecosystems inspire our research approach. During research
+                        visits to marine stations in Kristineberg and Askö, Didem observed that thriving ecosystems aren't populated by identical organisms.
+                        Instead, diversity – different species, sizes, and capabilities – creates resilience and efficiency.
+                        This principle directly informs our multi-robot research. Just as forests and oceans benefit from biodiversity, robot teams become
+                        more capable when they're heterogeneous rather than homogeneous.
+                        The interview included demonstrations of our simulation environments where robots learn through multi-agent reinforcement learning.
+                        Instead of explicitly programming every action, we define rewards and penalties, allowing algorithms to discover optimal strategies
+                        through trial and error.
+                        <br/>
+                        Examples shown included:
+                    </p>
+                    <ul>
+                        <li>Balancing a stick on a moving cube – a classic control problem solved through reward-based learning</li>
+                        <li>Robotic hands passing a ball between each other – demonstrating coordinated manipulation</li>
+                        <li>Mobile bases with robotic arms navigating complex tasks</li>
+                    </ul>
 
+                    <p style="text-align:justify">
+                        One major advantage of simulation is that we can train hundreds or even thousands of robots simultaneously, something impossible
+                        in a physical lab. Once trained, these learned behaviors transfer to our physical robots.
+                        While the interview touched on many specific technical topics, it also conveyed our lab's broader vision: developing cyber-physical
+                        systems that can seamlessly collaborate with each other and with humans across diverse applications – from manufacturing and
+                        logistics to emergency response and healthcare.
+                        The challenge isn't just making individual robots smarter or more capable. It's creating frameworks for interoperability,
+                        developing protocols for multi-agent coordination, ensuring systems remain robust and safe in dynamic environments, and ultimately
+                        building technology that enhances rather than replaces human capabilities.
+                        <br/>
+                        The complete conversation covers much more depth on each of these topics, including detailed technical discussions and live
+                        demonstrations. Whether you're a researcher, student, industry partner, or simply curious about the future of robotics, we encourage
+                        you to watch.
+                    </p>
 
-<!--                    <div class="media-grid">-->
-<!--                        <div class="media-item">-->
-<!--                            <img src="../images/blogposts/images/final_designs.png" alt="Summary of elements">-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <h3>Event Gallery</h3>
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <!--suppress CheckImageSize -->
+                                    <img src="../images/blogposts/images/Didem_Anneli_UppTalk.png" width="50%" height="50%" alt=""/>
+                                </div>
+                            </div>
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <!--suppress CheckImageSize -->
+                                    <img src="../images/blogposts/images/Didem_Anneli_UppTalk2.png" width="50%" height="50%" alt=""/>
+                                </div>
+                            </div>
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <!--suppress CheckImageSize -->
+                                    <img src="../images/blogposts/images/Didem_Anneli_UppTalk3.png" width="50%" height="50%" alt=""/>
+                                </div>
+                            </div>
+                            <div class="media-grid">
+                                <div class="media-item">
+                                    <!--suppress CheckImageSize -->
+                                    <img src="../images/blogposts/images/Didem_Anneli_UppTalk4.png" width="50%" height="50%" alt=""/>
+                                </div>
+                            </div>
 
-<!--                    <h3>Event Gallery</h3>-->
-<!--                        <i><strong>Photo credit:</strong></i>-->
-<!--                        <div class="media-grid">-->
-<!--                            <div class="media-item">-->
-<!--                                <img src="../images/blogposts/images/photo_roman.jpeg" alt="Photo from the conference">-->
-<!--                                <div class="caption">Here is also a photo of our presentation at the conference</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                </div>-->
-<!--            </section>-->
-<!--        </div>-->
+                    <h3>Join Our Research Community</h3>
+                        <p style="text-align:justify">
+                            <i> Interested in multi-robot systems, reinforcement learning, or cyber-physical systems? Our lab is always looking for
+                                talented researchers at all levels – PhD students, postdocs, and visiting researchers. We maintain an interdisciplinary
+                                team with backgrounds in robotics, computer science, mechatronics, engineering psychology, and related fields.
+                                For more information about research opportunities, collaborations, or our ongoing projects, visit our lab website or
+                                contact us directly.
+                            </i>
+                        </p>
+                </div>
+            </section>
+        </div>
     </div>
 
     <!-- Contact - automatically fetches data from the contact.html file
