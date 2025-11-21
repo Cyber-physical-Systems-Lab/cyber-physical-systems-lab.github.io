@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<!--
+    Forty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+    <head>
+        <title>Art Residency Call - CPS-Lab</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+        <style>
+            /* Sticky header of the code block, It is never out of view. */
+            .bibtex-container header {
+                position: sticky;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+
+                /* moves button to end of the header */
+                display: flex;
+                justify-content: end;
+
+                padding-block: 0.25rem;
+            }
+
+            .bibtex-container button {
+                font-size: 0.9rem;
+                background-color: #828282;
+
+                margin-block: auto;
+
+                border: ridge 1px #7b7b7c;
+                border-radius: 5px;
+                text-shadow: #c4c4c4 0 0 2px;
+            }
+
+            .bibtex-container button:hover {
+                background-color: #bcbabb;
+            }
+
+            .media-item img,
+            .media-item iframe {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                flex-grow: 1;
+            }
+
+            iframe {
+                aspect-ratio: 16/9;
+            }
+        </style>
+    </head>
+
+    <body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="/index.html" class="logo"><strong>Cyber-physical Systems Lab</strong> <span>at Uppsala University</span></a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/team.html">Team</a></li>
+                <li><a href="/blogpostslanding1.html">Blog Posts</a></li>
+                <li><a href="/openpositions.html">Open Positions</a></li>
+                <li><a href="/researchtopics.html">Research Topics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main" class="alt">
+
+            <!-- One -->
+            <section id="one">
+                <div class="inner">
+                    <h1 style="margin: 0 0 0 0;border-bottom: 2px solid white">
+                        Art Residency Call: Robots Meet Creativity
+                    </h1>
+
+                    <h3 style="text-align:justify;margin-top: 1cm">Are you an artist or art student ready to push boundaries at the
+                        intersection of robotics and creative expression?</h3>
+                        <p style="text-align:justify">
+                            The Cyber-Physical Systems Lab at Uppsala University invites visionary artists
+                            to explore the creative potential of robotic systems through our open art residency program.
+                        </p>
+
+                    <h3 style="text-align:justify">What We Offer</h3>
+                        <ul style="text-align:justify">
+                            <li><strong>Access to cutting-edge robotics:</strong> Work hands-on with our diverse fleet of robotic platforms - from mobile robots
+                                to drone swarms and collaborative robotic systems</li>
+                            <li><strong>Technical expertise and mentorship:</strong> Collaborate directly with robotics researchers who are passionate about
+                                 bridging technology and art</li>
+                            <li><strong>Lab resources and equipment:</strong> Full support to develop and realize demonstrators for your art projects</li>
+                            <li><strong>Flexible residency:</strong> 2 - 6 months tailored to your project needs</li>
+                            <li><strong>Interdisciplinary environment:</strong> Join a dynamic research lab where innovation meets creativity</li>
+                        </ul>
+
+                    <h3 style="text-align:justify">Who Should Apply</h3>
+                        Artists, designers, and creative practitioners who:
+                        <ul style="text-align:justify;margin-top: 1cm">
+                            <li>Have a compelling vision for integrating robotics into artistic practice</li>
+                            <li>Want to explore how autonomous systems can become mediums for creative expression</li>
+                            <li>Seek to challenge conventional boundaries between art, technology, and society</li>
+                            <li>Are curious about the inner workings of a robotics research lab</li>
+                        </ul>
+
+                    <h3 style="text-align:justify">How to Apply</h3>
+                        <strong>This is a rolling call - applications accepted year-round.</strong>
+                        <ol style="text-align:justify;margin-top: 1cm">
+                            <li>Explore our robotic capabilities: <a href="robots.html" class="link">Robot Colleagues</a> and <a href="blogpostslanding1.html" class="link">Projects</a></li>
+                            <li>Send us your application via email including:
+                                <ul>
+                                    <li>Your CV</li>
+                                    <li>A project proposal (minimum 3 pages) describing your artistic vision and how you envision using our robotic systems</li>
+                                </ul>
+                            </li>
+                        </ol>
+
+                    <h3 style="text-align:justify"><strong>Contact <a href="mailto:didem.gurdur.broo@it.uu.se" class="link"><u>didem.gurdur.broo@it.uu.se</u></a> for applications or questions</strong></h3>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Contact - automatically fetches data from the contact.html file
+    modifying in all other HTML files which have
+    this script without the manual copy-paste for further changes -->
+    <script>
+        fetch('../contact.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+            })
+    </script>
+
+    <!-- Footer - automatically fetches data from the contact.html file
+    modifying in all other HTML files which have
+    this script without the manual copy-paste for further changes -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('wrapper').insertAdjacentHTML("beforeend", html);
+            })
+    </script>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.scrolly.min.js"></script>
+    <script src="/assets/js/jquery.scrollex.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </body>
+</html>
