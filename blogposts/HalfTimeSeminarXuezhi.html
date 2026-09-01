@@ -68,6 +68,24 @@
                 display: block;
                 margin-top: 2rem;
             }
+
+            .resource-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+                margin-top: 1.5rem;
+            }
+
+            .resource-links li {
+                padding: 0;
+            }
+
+            @media screen and (max-width: 736px) {
+                .resource-links li,
+                .resource-links .button {
+                    width: 100%;
+                }
+            }
         </style>
     </head>
 
@@ -114,7 +132,7 @@
                         <h5>Post's content provided by: CPS-Lab Team</h5>
 
                         <ul class="event-facts">
-                            <li><strong>When:</strong><br/>1 September 2026</li>
+                            <li><strong>When:</strong><br/>26 August 2026</li>
                             <li><strong>Where:</strong><br/>Uppsala University</li>
                             <li><strong>Research area:</strong><br/>Heterogeneous multi-robot cooperation</li>
                         </ul>
@@ -161,6 +179,24 @@
                                 guidance, thoughtful questions, and constructive feedback.
                             </p>
                         </div>
+
+                        <h3>Report and seminar slides</h3>
+                        <p style="text-align:justify">
+                            Explore the complete half-time report or revisit the seminar presentation. For reliable
+                            viewing in any PDF reader, the downloadable slide deck uses representative still images in
+                            place of the original animations.
+                        </p>
+
+                        <ul class="actions resource-links">
+                            <li>
+                                <a href="../images/blogposts/files/xuezhi-half-time-report-2026.pdf"
+                                   class="button" target="_blank" rel="noopener">Read the report (PDF)</a>
+                            </li>
+                            <li>
+                                <a href="../images/blogposts/files/xuezhi-half-time-seminar-slides-2026.pdf"
+                                   class="button" target="_blank" rel="noopener">View the slides (PDF)</a>
+                            </li>
+                        </ul>
 
                         <h3>Onward to the second half</h3>
                         <p style="text-align:justify">
